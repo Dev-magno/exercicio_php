@@ -31,7 +31,7 @@ else{
 
 // Q5
 $Curso = "programador webd";
-if(str_contains($Curso, "a") || str_contains($Curso, "o")){
+if(str_contains($Curso, "a") && str_contains($Curso, "o")){
     echo "Contém <br>";
 }
 else{
@@ -46,9 +46,17 @@ function retornarArgumento($n3=10){
 echo retornarArgumento();
 
 // Q7
-function verificarSenha{
-    $senha_valida = true
-    $senha_invalida = false
+function verificarSenha($senha){
+    if(ctype_upper($senha) && ctype_lower($senha) && ctype_digit($senha) && strlen($senha)>=8){
     
+        echo 'Válida';
+    }
+
+    else{
+       
+        echo 'Inválida';
+    }
 
 }
+
+verificarSenha('1234Mcm2');
