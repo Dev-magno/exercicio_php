@@ -132,3 +132,36 @@ $meuArray = numerosPares($numero); // chama a função com o valor do teste pass
 foreach ($meuArray as $numeroPar) { 
     echo $numeroPar . " ";  // exibe cada número par 
 }
+
+// Q 12
+// função para calcular o século com o parâmetro $ano
+function calcularSecular($ano){
+    if($ano % 100 == 0) { 
+        $seculo = $ano / 100; // divide o ano por 100 tendo em vista a quantidade do meso para um século
+    }else {
+        $seculo = floor($ano / 100) + 1; // divide por cem, arredonda para baixo e adiciona 1
+    }
+    return   $seculo; // retorna o século calculado 
+    
+}
+
+// teste da função
+$ano = 300; // ano desejado para saber a qual século pertence
+$seculo = calcularSecular($ano); // chama a função para fazer o calculo do século
+
+echo "O ano $ano está no século $seculo \n"; // exibe o resultado do calculo e mostra o século a quem pertence o número desejado
+
+// Q 13
+// função para calcular o século com o parâmetro $ano
+function stringPalindromo($string){
+    if(strrev($string) === $string){ // Verifica se a string é igual à sua versão invertida
+       return 'Palíndromo';
+    } else{
+       return 'Não é Palíndromo';
+    }   
+}
+
+// teste da função
+$result = "DAD"; // string desejada para verificar se é um palíndromo
+$string = stringPalindromo($result); // chama a função para verificar a string
+echo $string; // exibe o resultado
