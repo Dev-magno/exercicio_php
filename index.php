@@ -40,10 +40,11 @@ else{
 
 //Q6
 function retornarArgumento($n3=10){
-    return $n3 = 10;
+    return $n3 = 10; 
 }
 
-echo retornarArgumento();
+retornarArgumento();
+echo "<br>";
 
 // Q7
 function verificarSenha($senha){
@@ -73,7 +74,7 @@ function verificarSenha($senha){
 
       // verifica se a senha atende a todos os requisitos
         if($temMaiscula && $temMinuscula && $temDigito && $temOito){
-            echo "Senha válida!";
+            echo "Senha válida!<br>";
         }
         else{
             echo "Senha inválida!";
@@ -84,6 +85,7 @@ verificarSenha("1Mnut674");
 //Q8
 $idade = 18;
 echo  ($idade >= 18)? "Maior" : "Menor";
+ echo "<br>";
 
 // Q9
 $alunos = array(
@@ -97,7 +99,8 @@ $alunos = array(
 
 foreach($alunos as $nome => $nota){
     if($nota >= 7)
-    echo "Aluno: $nome, Nota: $nota\n";
+    echo "Aluno: $nome, Nota: $nota";
+    echo "<br>";
 }
 
 // Q10
@@ -113,7 +116,7 @@ function calcularAreaCirculo($raio){
 $raio = 4; // define um valor teste para raio
 $area = calcularAreaCirculo($raio); // chama a função calcularAreaCirculo com o valor de teste e armazena o resultado na variavel $area
 echo "A área do círculo com valor teste raio $raio é $area"; // imprime a área do circulo com o valor de teste do raio
-
+echo "<br>";
 // Q11
 function numerosPares($n){
     $pares = array(); // inicia um array vazio para armazenar números pares
@@ -135,21 +138,20 @@ foreach ($meuArray as $numeroPar) {
 
 // Q 12
 // função para calcular o século com o parâmetro $ano
-function calcularSecular($ano){
+function calcularSeculo($ano){
     if($ano % 100 == 0) { 
         $seculo = $ano / 100; // divide o ano por 100 tendo em vista a quantidade do meso para um século
     }else {
         $seculo = floor($ano / 100) + 1; // divide por cem, arredonda para baixo e adiciona 1
     }
-    return   $seculo; // retorna o século calculado 
+    return $seculo; // retorna o século calculado 
     
 }
 
 // teste da função
 $ano = 300; // ano desejado para saber a qual século pertence
-$seculo = calcularSecular($ano); // chama a função para fazer o calculo do século
-
-echo "O ano $ano está no século $seculo \n"; // exibe o resultado do calculo e mostra o século a quem pertence o número desejado
+$seculo = calcularSeculo($ano); // chama a função para fazer o calculo do século
+echo "<O ano $ano está no século $seculo"; // exibe o resultado do calculo e mostra o século a quem pertence o número desejado
 
 // Q 13
 // função para calcular o século com o parâmetro $ano
